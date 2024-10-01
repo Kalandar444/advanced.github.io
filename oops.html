@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class student{
+            constructor(name,age){
+                this.studentname=name;
+                   this.studentage = age;
+                console.log("constructor function");
+            }
+            hello(){
+                document.write(`Hello  ${this.studentname} your age is ${this.studentage}`);
+            }
+            static staticMethod(){
+                 console.log("static function");
+
+            }
+        }
+        let a=new student("yahoo baba",25);
+         let b = new student("kalandar shafi", 22);
+
+       
+        a.hello();
+      student.staticMethod();
+
+     
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

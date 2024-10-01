@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        async function test(){
+            try{
+             console.log("2:Message");
+           const response=await fetch("json/student_data.join");
+           
+               const students = await response.json();
+          return students;
+            }catch(error){
+                console.log(error);
+            }
+        }
+       test().then((res)=>{
+        console.log(res);
+       }).catch((error) => {
+           console.log(error);
+       });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

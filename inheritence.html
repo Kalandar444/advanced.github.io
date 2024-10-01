@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Employee {
+            constructor(name, age, salary) {
+                this.empName = name;
+                this.empAge = age;
+                this.empSalary = salary;
+                console.log("Constructor: Employee " + name);
+            }
+
+            info() {
+                document.write(`<h3>Employee class</h3>
+                Name: ${this.empName}<br>
+                Age: ${this.empAge}<br>
+                Salary: ${this.empSalary}<br>`);
+            }
+        }
+
+        class Manager extends Employee {
+            constructor(name, age, salary) {
+                super(name, age, salary);
+                this.ta = 1000; // Travel Allowance
+                this.pa = 300;  // Professional Allowance
+                this.totalSalary = this.empSalary + this.ta + this.pa;
+            }
+
+            info() {
+                document.write(`<h3>Manager class</h3>
+                Name: ${this.empName}<br>
+                Age: ${this.empAge}<br>
+                Salary: ${this.totalSalary}<br>`);
+            }
+        }
+
+        // Ensure this is executed when the DOM is fully loaded
+        window.onload = function () {
+            let a = new Manager("Yahoo Baba", 25, 20000);
+                   let b = new Manager("kalandar shafi", 25, 20000);
+            a.info();
+            b.info();
+        };
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
